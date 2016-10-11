@@ -1,46 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <base href="<%= APP_BASE %>">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><%= APP_TITLE %></title>
+  <title>
+    <%= APP_TITLE %>
+  </title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"  />
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <!-- inject:css -->
   <!-- endinject -->
 </head>
+
 <body>
-
+  
+<!--    
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+          Panel content
+        </div>
+    </div>-->
+  <!--<div class="row" >-->
+  <!--This is a row-->
   <sd-app>Loading...</sd-app>
-
+  <!--</div>-->
   <script>
   // Fixes undefined module function in SystemJS bundle
   function module() {}
   </script>
-
   <!-- shims:js -->
   <!-- endinject -->
-
   <% if (ENV === 'dev') { %>
-  <script src="<%= APP_BASE %>app/system-config.js"></script>
-  <% } %>
-
-  <!-- libs:js -->
-  <!-- endinject -->
-
-  <!-- inject:js -->
-  <!-- endinject -->
-
-  <% if (ENV === 'dev') { %>
-  <script>
+    <script src="<%= APP_BASE %>app/system-config.js"></script>
+   <% } %>
+      <!-- libs:js -->
+      <!-- endinject -->
+      <!-- inject:js -->
+      <!-- endinject -->
+      <% if (ENV === 'dev') { %>
+        <script>
   System.import('<%= BOOTSTRAP_MODULE %>')
     .catch(function (e) {
       console.error(e,
         'Report this error at https://github.com/mgechev/angular2-seed/issues');
     });
   </script>
-  <% } %>
-
+        <% } %>
 </body>
 </html>

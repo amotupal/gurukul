@@ -1,0 +1,13 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            Discussion
+        </h3>
+    </div>
+
+    <div class="panel-body">
+        <div *ngFor="let comment of comments">
+            <comment [comment]="comment"></comment>
+        </div>
+    </div>
+</div>
