@@ -4,6 +4,7 @@ import { Component,Input, OnInit } from '@angular/core';
     moduleId:module.id,
     selector: 'comment',
     templateUrl: 'comment.component.html',
+    styleUrls: ['comment.component.css'],
     inputs: ['comment']
     // styleUrls:['../../node_modules/bootstrap/dist/css/bootstrap.min.css']
 })

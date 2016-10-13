@@ -9,10 +9,12 @@ import { routes } from './app.routes';
 import { AboutModule } from './about/about.module';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
+import { CommentsModule } from './comments/comments.module';
+import { CommentsComponent,CommentComponent,NewCommentComponent } from './comments/index';
 
 @NgModule({
-  imports: [BrowserModule, HttpModule, RouterModule.forRoot(routes), AboutModule, HomeModule,  SharedModule.forRoot()],
-  declarations: [AppComponent],
+  imports: [BrowserModule, HttpModule, RouterModule.forRoot(routes), AboutModule, HomeModule,CommentsModule, SharedModule.forRoot()],
+  declarations: [AppComponent, CommentsComponent, CommentComponent,NewCommentComponent],
   providers: [{
     provide: APP_BASE_HREF,
     useValue: '<%= APP_BASE %>'

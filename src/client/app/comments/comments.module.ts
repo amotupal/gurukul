@@ -5,9 +5,9 @@ import { NameListService } from '../shared/name-list/index';
 import { CommentsComponent, CommentComponent } from './index';
 
 @NgModule({
-    imports: [CommonModule, SharedModule, CommentComponent],
-    exports: [CommentComponent,CommentsComponent],
-    declarations: [CommentsComponent,CommentComponent],
+    imports: [CommonModule, SharedModule],
+    exports: [],
+    declarations: [],
     providers: [NameListService],
 })
 export class CommentsModule { }

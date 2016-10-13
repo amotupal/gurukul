@@ -1,8 +1,11 @@
 <div class="panel panel-default">
     <div class="panel-heading"> 
-        {{comment.author}} <span class= "pull-right" style="font-style:italic" >{{comment.date}} </span>
+       <span style="font-style:italic"> {{comment.author}} </span> <span class= "pull-right" style="font-style:italic" >{{comment.date}} </span>
     </div>
     <div class="panel-body">
         {{comment.comment}}
+    </div>
+    <div class="panel-footer">
+       <span class="pull-right"> <a class="like-button" href="#">Like</a> <a class="reply-button" href="#"> Reply</a> </span>
     </div>
 </div>
