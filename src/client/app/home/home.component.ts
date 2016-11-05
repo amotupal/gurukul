@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NameListService } from '../shared/index';
-
+import { TinymceComponent } from '../shared/tinymce/tinymce.component';
 
 /**
  * This class represents the lazy loaded HomeComponent.
@@ -43,6 +43,9 @@ export class HomeComponent implements OnInit {
 		       names => this.names = names,
 		       error =>  this.errorMessage = <any>error
 		       );
+  }
+  descriptionChanged(newDescription: string){
+    // this.task.Description = newDescription;
   }
 
   /**
